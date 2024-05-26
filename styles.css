@@ -1,0 +1,576 @@
+/* Base styles */
+
+body {
+    margin: 0;
+    font-family: "Nunito Sans", sans-serif;
+    background-color: #FFFBF6;
+}
+
+p {
+    margin: 0;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    margin: 0;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 24px;
+    margin: 0;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+h3 {
+    font-weight: 600;
+    font-size: 24px;
+    margin: 0;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #FF983D; /* Orange background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: top 0.3s;
+}
+
+.nav-wrapper {
+    max-width: 1200px; /* Max width for the content */
+    margin: 0 auto; /* Center the content */
+    padding: 0 16px; /* Padding on the sides */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1; /* Allow the menu to grow */
+    justify-content: center; /* Center the menu items */
+}
+
+.nav-menu li {
+    margin-left: 20px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: white; /* White text */
+    font-weight: 600;
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.nav-buttons button {
+    margin-left: 20px;
+    padding: 10px 20px;
+    border: none;
+    background: white;
+    color: #333;
+    cursor: pointer;
+    border-radius: 20px; /* Rounded buttons */
+    font-weight: bold;
+}
+
+.nav-buttons .signup-btn {
+    background: #AFED4A; /* Green background */
+    color: #333;
+}
+
+/* Hero section */
+#hero {
+    background: url(imgs/background.png) no-repeat center;
+    background-size: cover;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Full viewport height */
+    height: 100vh;
+    text-align: center;
+    padding-top: 0;
+}
+
+.hero-content {
+    max-width: 700px; /* Optional: Limit the width of the content */
+}
+
+#hero h1 {
+    font-size: 64px; /* Large text */
+    margin: 0;
+    padding-bottom: 0px;
+}
+
+#hero h2 {
+    font-size: 24px;
+    margin-bottom: 48px;
+}
+
+.cta-button {
+    background: #AFED4A;
+    color: #333;
+    padding: 14px 28px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+#partners {
+    padding-top: 64px;
+    padding-bottom: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+#partners h3 {
+    color: #afafaf;
+}
+
+.partners-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#partners img {
+    padding-top: 6px;
+    max-width: 182px;
+    max-height: 42px;
+}
+
+.content {
+    background-color: white;
+    max-width: 1224px;
+    padding: 64px 64px;
+    border-radius: 25px;
+    margin: 0 auto;
+}
+
+/* Our Story Section */
+.our-story {
+    background: #FFFBF6;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.our-story h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #a2a2a2;
+}
+
+.our-story h1 {
+    font-size: 48px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.story-images {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.story-images img {
+    width: 256px;
+}
+
+.our-story p {
+    font-size: 24px;
+    color: #333;
+    min-width: 800px;
+    margin: 0 auto;
+}
+
+/* Subscriptions Section */
+.subscriptions {
+    background: #FFFBF6;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.subscriptions h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #a2a2a2;
+}
+
+.subscriptions h1 {
+    font-size: 48px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.subscriptions p {
+    font-size: 24px;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.subscription-container {
+    padding-top: 32px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow wrapping for responsive design */
+}
+
+.subscription-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card-header {
+    margin-bottom: 20px;
+}
+
+.profile-placeholder {
+    width: 80px;
+    height: 80px;
+    background: #e0e0e0;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+}
+
+h2 {
+    margin: 10px 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.features li {
+    margin: 10px 0;
+    font-size: 1em;
+}
+
+.checkmark {
+    color: green;
+    margin-right: 5px;
+}
+
+.crossmark {
+    color: red;
+    margin-right: 5px;
+}
+
+/* Contact Us Section */
+.contact-us {
+    background: #FFFBF6;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-us h2 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.contact-us h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Allow wrapping for responsive design */
+}
+
+.contact-info {
+    flex: 1;
+    text-align: left;
+}
+
+.contact-form {
+    flex: 2;
+    align-items: flex-start
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
+.contact-form button {
+    background: #ccff66;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1em;
+    color: #333;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #f1f1f1;
+    margin-top: 50px;
+}
+
+/* Sign Up Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #FFFBF6;
+    margin: 15% auto;
+    padding: 48px 32px;
+    border: 1px solid #888;
+    width: 400PX;
+    text-align: center;
+    border-radius: 15px;
+}
+/* 
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+} */
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 24px;
+}
+
+.google-btn, .apple-btn, .signup-btn, .login-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 18px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.google-btn {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    color: #333;
+}
+
+.apple-btn {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    color: #333;
+}
+
+.signup-btn {
+    background-color: #AFED4A;
+    color: #333;
+}
+
+.login-btn {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    color: #333;
+}
+
+
+.modal-content form input {
+    width: calc(100% - 20px);
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.modal-content form input[type="email"],
+.modal-content form input[type="password"] {
+    width: calc(100% - 20px);
+    margin: 5px 10px;
+}
+
+.modal-content form p {
+    font-size: 18px;
+}
+
+.modal-content form a {
+    color: #AFED4A;
+    text-decoration: none;
+}
+
+
+/* Media Queries for responsiveness */
+
+@media (max-width: 1200px) {
+    .nav-wrapper {
+        padding: 0 32px;
+    }
+
+    .content {
+        padding: 64px 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-wrapper {
+        padding: 0 16px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-menu li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .nav-buttons {
+        flex-direction: column;
+    }
+
+    .nav-buttons button {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    #hero h1 {
+        font-size: 48px;
+    }
+
+    .hero-content {
+        padding: 0 16px;
+    }
+
+    .story-images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .story-images img {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .contact-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-info, .contact-form {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-wrapper {
+        padding: 0 8px;
+    }
+
+    #hero h1 {
+        font-size: 36px;
+    }
+
+    #hero h2 {
+        font-size: 18px;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    .subscription-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .contact-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-info, .contact-form {
+        width: 100%;
+    }
+}
