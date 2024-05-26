@@ -1,82 +1,186 @@
-let lastScrollTop = 0;
-const navbar = document.getElementById('top-nav');
+<!DOCTYPE html>
+<html lang="en">
 
-window.addEventListener('scroll', () => {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    if (scrollTop > lastScrollTop) {
-        // Downscroll
-        navbar.style.top = '-80px'; // Adjust this value if your nav bar height is different
-    } else {
-        // Upscroll
-        navbar.style.top = '0';
-    }
-    lastScrollTop = scrollTop;
-});
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No Scraps</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
 
-// Get the modal
-var modal = document.getElementById("signup-modal");
+<body>
+    <header id="top-nav">
+        <div class="nav-wrapper">
+            <nav>
+                <div class="logo">
+                    <img src="imgs/logo.png" alt="No Scraps Logo">
+                </div>
+                <div class="menu">
+                    <ul class="nav-menu">
+                        <li><a href="#our-story">Our story</a></li>
+                        <li><a href="#what-we-offer">What we offer</a></li>
+                        <li><a href="#contact-us">Contact us</a></li>
+                    </ul>
+                    <div class="nav-buttons">
+                        <button class="login-btn">Log in</button>
+                        <button class="signup-btn" id="open-signup">Sign up</button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
 
-// Get the button that opens the modal
-var btn = document.getElementById("open-signup");
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h1>Keeping your kitchen waste-free</h1>
+                <h2>Simplify your life and reduce food waste</h2>
+                <a href="#download" class="cta-button">Download the App</a>
+            </div>
+        </section>
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+        <section id="partners">
+            <div class="partners-content">
+                <h3>
+                    Proud partners with
+                </h3>
+                <img src="imgs/woolies.png">
+            </div>
+        </section>
 
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-    modal.style.display = "block";
-}
+        <!-- Our Story Section -->
+        <section id="our-story" class="our-story">
+            <div class="content">
+                <h2>Our Story</h2>
+                <h1>From the grocery store to your kitchen counter...</h1>
+                <div class="story-images">
+                    <img src="imgs/story-1.png" alt="Story Image 1">
+                    <img src="imgs/story-3.png" alt="Story Image 2">
+                    <img src="imgs/story-2.png" alt="Story Image 3">
+                </div>
+                <p>Australian households waste 2.5m tonnes of food each year, costing them $19.3 billion. Our mission is to
+                    make waste reduction easy and accessible for everyone, saving you money and promoting sustainable living
+                    habits for the future! We wish to actively grow a community of foodies interested in reducing their food
+                    waste and helping others do the same.</p>
+            </div>
+        </section>
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-}
+        <!-- Subscriptions Section -->
+        <section id="what-we-offer" class="subscriptions">
+            <div class="content">
+                <h2>Subscriptions</h2>
+                <h1>What we are offering</h1>
+                <p>Choose the perfect plan to keep your kitchen waste-free and your wallet happy! NoScraps Australia offers
+                    flexible subscriptions tailored to fit your needs.</p>
+                <div class="subscription-container">
+                    <div class="subscription-card">
+                        <div class="card-header">
+                            <div class="profile-placeholder"></div>
+                            <h2>Basic Subscription</h2>
+                            <p>Free</p>
+                        </div>
+                        <ul class="features">
+                            <li><span class="checkmark">✔</span> Expiration Tracker</li>
+                            <li><span class="crossmark">✖</span> Recipes and Tips</li>
+                            <li><span class="crossmark">✖</span> Community Hub</li>
+                        </ul>
+                    </div>
+                    <div class="subscription-card">
+                        <div class="card-header">
+                            <div class="profile-placeholder"></div>
+                            <h2>Plus Subscription</h2>
+                            <p>$12.99/month</p>
+                        </div>
+                        <ul class="features">
+                            <li><span class="checkmark">✔</span> Expiration Tracker</li>
+                            <li><span class="crossmark">✖</span> Recipes and Tips</li>
+                            <li><span class="crossmark">✖</span> Community Hub</li>
+                        </ul>
+                    </div>
+                    <div class="subscription-card">
+                        <div class="card-header">
+                            <div class="profile-placeholder"></div>
+                            <h2>Prem Subscription</h2>
+                            <p>$15.99/month</p>
+                        </div>
+                        <ul class="features">
+                            <li><span class="checkmark">✔</span> Expiration Tracker</li>
+                            <li><span class="crossmark">✖</span> Recipes and Tips</li>
+                            <li><span class="crossmark">✖</span> Community Hub</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
+        <!-- Contact Us Section -->
+        <section id="contact-us" class="contact-us">
+            <div class="content">
+                <h2>Contact us</h2>
+                <h1>Keen to learn more?</h1>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <p>Find us online</p>
+                        <p><strong>Instagram</strong> @noscrapsapp</p>
+                        <p><strong>Facebook</strong> @noscrapsapp</p>
+                    </div>
+                    <form class="contact-form">
+                        <input type="text" placeholder="Your name" required>
+                        <input type="email" placeholder="Your email address" required>
+                        <textarea placeholder="Message" required></textarea>
+                        <button type="submit">Send message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
 
-// Handle the sign-up form submission specifically for the modal
-document.querySelector('.modal .signup-btn').addEventListener('click', function(event) {
-    event.preventDefault(); // Prevent the form from submitting in the traditional way
-    window.location.href = 'dashboard.html'; // Redirect to the dashboard page
-});
+    </main>
 
-// Show the newsletter modal after the page loads
-window.onload = function() {
-    setTimeout(function() {
-        var newsletterModal = document.getElementById("newsletter-modal");
-        newsletterModal.style.display = "block";
-    }, 2000); // 2-second delay
-}
+    <!-- Sign Up Modal -->
+    <div id="signup-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h1>Welcome to No Scraps</h1>
+            <button class="google-btn">Continue with Google</button>
+            <button class="apple-btn">Continue with Apple</button>
+            <hr>
+            <p>or</p>
+            <form>
+                <input type="text" placeholder="First name" required>
+                <input type="text" placeholder="Last name" required>
+                <input type="email" placeholder="Your email address" required>
+                <input type="password" placeholder="Password" required>
+                <p>By creating an account, you agree to the <a href="#">Terms of use</a> and <a href="#">Privacy Policy</a>.</p>
+                <button type="submit" class="signup-btn">Sign up</button>
+            </form>
+            <button class="login-btn">Log in</button>
+        </div>
+    </div>
 
-// Get the <span> element that closes the newsletter modal
-var closeNewsletter = document.getElementsByClassName("close-newsletter")[0];
+    <!-- Newsletter Sign Up Modal -->
+    <div id="newsletter-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-newsletter">&times;</span>
+            <h1>Sign up to our newsletter</h1>
+            <form>
+                <input type="email" placeholder="Your email address" required>
+                <p>By creating an account, you agree to the <a href="#">Terms of use</a> and <a href="#">Privacy Policy</a>.</p>
+                <button type="submit" class="signup-btn">Submit</button>
+            </form>
+        </div>
+    </div>
 
-// When the user clicks on <span> (x), close the newsletter modal
-closeNewsletter.onclick = function() {
-    var newsletterModal = document.getElementById("newsletter-modal");
-    newsletterModal.style.display = "none";
-}
+    <footer>
+        <p>&copy; 2024 No Scraps. All rights reserved.</p>
+    </footer>
 
-// When the user clicks anywhere outside of the newsletter modal, close it
-window.onclick = function(event) {
-    var newsletterModal = document.getElementById("newsletter-modal");
-    if (event.target == newsletterModal) {
-        newsletterModal.style.display = "none";
-    }
-}
+    <script src="script.js"></script> <!-- Link to your JavaScript file -->
+</body>
 
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
+</html>
