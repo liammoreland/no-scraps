@@ -397,28 +397,6 @@ footer {
     text-align: center;
     border-radius: 15px;
 }
-
-/* Modal styles (reuse the existing modal styles and add specifics for the newsletter modal) */
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1001;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.4);
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px
-
 /* 
 .close {
     color: #aaa;
@@ -596,3 +574,105 @@ footer {
         width: 100%;
     }
 }
+/* Modal styles (reuse the existing modal styles and add specifics for the newsletter modal) */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.close, .close-newsletter {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus, .close-newsletter:hover, .close-newsletter:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.modal-content form input {
+    width: calc(100% - 20px);
+    margin: 5px 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.modal-content form p {
+    font-size: 12px;
+}
+
+.modal-content form a {
+    color: #AFED4A;
+    text-decoration: none;
+}
+
+.google-btn, .apple-btn, .signup-btn, .login-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.google-btn {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    color: #333;
+}
+
+.apple-btn {
+    background-color: #333;
+    color: #fff;
+}
+
+.signup-btn {
+    background-color: #AFED4A;
+    color: #333;
+}
+
+.login-btn {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    color: #333;
+}
+
+.modal-content hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 20px 0;
+}
+
